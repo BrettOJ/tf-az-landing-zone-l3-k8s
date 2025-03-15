@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: prometheus
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/BrettOJ/prometheus-helm-chart
+  ref:
+    branch: main
+  ignore: |
+    # exclude all
+    /*
+    # include charts directory
+    !/prometheus/

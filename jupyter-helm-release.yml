@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: jupyterhub
+  namespace: jupyter-hub
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: jupyterhub
+      sourceRef:
+        kind: GitRepository
+        name: jupyterhub
+        namespace: flux-system
+      interval: 5m
+
+  

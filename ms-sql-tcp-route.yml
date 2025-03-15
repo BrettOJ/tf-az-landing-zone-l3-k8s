@@ -1,0 +1,13 @@
+apiVersion: gateway.networking.k8s.io/v1alpha2
+kind: TCPRoute
+metadata:
+  name: mysql-tcp-route
+  namespace: my-sql
+spec:
+  parentRefs:
+    - name: mysql-gateway
+      namespace: istio-system
+  rules:
+    - backendRefs:
+        - name: mysql-service   
+          port: 3306
