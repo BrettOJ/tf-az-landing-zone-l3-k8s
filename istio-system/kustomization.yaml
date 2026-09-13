@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - istio-helm-repo.yaml
   - istio-base-helm-release.yaml
+  - istiod-helm-release.yaml
