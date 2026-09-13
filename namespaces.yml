@@ -6,34 +6,6 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: bookinfo
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: jupyter-hub
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: my-sql
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: mlflow
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: kiali
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: prometheus
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: grafana
+  name: cert-manager
+  labels:
+    istio-injection: enabled
